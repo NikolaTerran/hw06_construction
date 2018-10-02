@@ -1,4 +1,4 @@
-##include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 struct profile {char ini; char* name;};
@@ -9,19 +9,19 @@ void struct_print(struct profile student){
         printf("student last name: %s\n",student.name);
 }
 
-struct profile* struct_set(char a, char* b, struct profile student){
-        (*student).ini
-char * struct_get(){
-
+int struct_set(char a, char* b, struct profile *student){
+        student->ini = a;
+        student->name = b;
+	return 0;
 }
 
 int main(){
 
-//demo struct_get
-
 //demo struct_set
+struct_set('t',"liu",&studentA);
 
-//
+//demo struct_print
+struct_print(studentA);
 
 return 0;
 }
